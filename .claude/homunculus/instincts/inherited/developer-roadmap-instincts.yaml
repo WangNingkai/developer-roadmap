@@ -1,0 +1,226 @@
+# Instincts generated from https://github.com/WangNingkai/developer-roadmap
+# Generated: 2026-04-01T11:10:06.393Z
+# Version: 2.0
+# NOTE: This file supplements (does not replace) any existing curated instincts.
+# High-confidence manually curated instincts should be preserved alongside these.
+
+---
+id: developer-roadmap-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/WangNingkai/developer-roadmap
+---
+
+# Developer Roadmap Commit Length
+
+## Action
+
+Keep commit messages concise (~32 characters)
+
+## Evidence
+
+- Average commit message length: 32 chars
+- Based on 200 commits
+
+---
+id: developer-roadmap-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/WangNingkai/developer-roadmap
+---
+
+# Developer Roadmap Naming Files
+
+## Action
+
+Use kebab-case naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: kebab-case
+
+---
+id: developer-roadmap-import-relative
+trigger: "when importing modules"
+confidence: 0.75
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/WangNingkai/developer-roadmap
+---
+
+# Developer Roadmap Import Relative
+
+## Action
+
+Use relative imports for project files
+
+## Evidence
+
+- Import analysis shows relative import pattern
+- Example: import { x } from '../lib/x'
+
+---
+id: developer-roadmap-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/WangNingkai/developer-roadmap
+---
+
+# Developer Roadmap Export Style
+
+## Action
+
+Prefer named exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: named
+
+---
+id: developer-roadmap-test-separate
+trigger: "when writing tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/WangNingkai/developer-roadmap
+---
+
+# Developer Roadmap Test Separate
+
+## Action
+
+Place tests in the tests/ or __tests__/ directory, mirroring src structure
+
+## Evidence
+
+- Separate test directory pattern detected
+- Tests live in dedicated test folders
+
+---
+id: developer-roadmap-workflow-feature-development
+trigger: "when implementing a new feature"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/WangNingkai/developer-roadmap
+---
+
+# Developer Roadmap Workflow Feature Development
+
+## Action
+
+Follow the feature-development workflow:
+1. Add feature implementation
+2. Add tests for feature
+3. Update documentation
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~15x per month
+- Files: 
+
+---
+id: developer-roadmap-workflow-add-new-language-translation
+trigger: "when doing add new language translation"
+confidence: 0.55
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/WangNingkai/developer-roadmap
+---
+
+# Developer Roadmap Workflow Add New Language Translation
+
+## Action
+
+Follow the add-new-language-translation workflow:
+1. Create translated readme file in translations/<language>/readme.md or README.md
+2. Add translated roadmap images to translations/<language>/img/*.png
+3. Add translated roadmap JSON files to translations/<language>/src/*.json
+4. Optionally update translations/readme.md to link to new language
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~1x per month
+- Files: translations/<language>/readme.md, translations/<language>/README.md, translations/<language>/img/*.png
+
+---
+id: developer-roadmap-workflow-update-existing-translation
+trigger: "when doing update existing translation"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/WangNingkai/developer-roadmap
+---
+
+# Developer Roadmap Workflow Update Existing Translation
+
+## Action
+
+Follow the update-existing-translation workflow:
+1. Edit the relevant translation file(s) (readme.md, roadmap images, or JSON)
+2. Commit changes with a message referencing the language and nature of the update
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: translations/<language>/*
+
+---
+id: developer-roadmap-workflow-add-or-update-roadmap-section
+trigger: "when doing add or update roadmap section"
+confidence: 0.55
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/WangNingkai/developer-roadmap
+---
+
+# Developer Roadmap Workflow Add Or Update Roadmap Section
+
+## Action
+
+Follow the add-or-update-roadmap-section workflow:
+1. Edit the relevant roadmap JSON file in src/<section>-map.json
+2. Update the corresponding image in img/<section>.png
+3. Optionally update translations of the same section
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~1x per month
+- Files: src/<section>-map.json, img/<section>.png
+
+---
+id: developer-roadmap-workflow-add-or-update-sponsor-info
+trigger: "when doing add or update sponsor info"
+confidence: 0.55
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/WangNingkai/developer-roadmap
+---
+
+# Developer Roadmap Workflow Add Or Update Sponsor Info
+
+## Action
+
+Follow the add-or-update-sponsor-info workflow:
+1. Add or update sponsor logo in .github/sponsors/*.png or *.svg
+2. Update README.md to reflect sponsor changes
+3. Edit .github/FUNDING.yml if funding info changes
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~1x per month
+- Files: .github/sponsors/*.png, .github/sponsors/*.svg, .github/FUNDING.yml
+
