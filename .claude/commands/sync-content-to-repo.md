@@ -1,0 +1,36 @@
+---
+name: sync-content-to-repo
+description: Workflow command scaffold for sync-content-to-repo in developer-roadmap.
+allowed_tools: ["Bash", "Read", "Write", "Grep", "Glob"]
+---
+
+# /sync-content-to-repo
+
+Use this workflow when working on **sync-content-to-repo** in `developer-roadmap`.
+
+## Goal
+
+Synchronize new or updated content files from an external source or CMS into the repository, updating multiple markdown files across various roadmap domains.
+
+## Common Files
+
+- `src/data/roadmaps/*/content/*.md`
+- `src/data/question-groups/*/content/*.md`
+
+## Suggested Sequence
+
+1. Understand the current state and failure mode before editing.
+2. Make the smallest coherent change that satisfies the workflow goal.
+3. Run the most relevant verification for touched files.
+4. Summarize what changed and what still needs review.
+
+## Typical Commit Signals
+
+- Fetch new or updated content files from the external source.
+- Copy or update multiple markdown files in the appropriate roadmap/content directories.
+- Commit all changes with a standardized message (e.g., 'chore: sync content to repo').
+
+## Notes
+
+- Treat this as a scaffold, not a hard-coded script.
+- Update the command if the workflow evolves materially.
