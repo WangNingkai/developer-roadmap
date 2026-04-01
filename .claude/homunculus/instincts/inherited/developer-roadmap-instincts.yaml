@@ -1,0 +1,604 @@
+# Instincts generated from https://github.com/WangNingkai/developer-roadmap
+# Generated: 2026-04-01T09:50:05.504Z
+# Version: 2.0
+# NOTE: This file supplements (does not replace) any existing curated instincts.
+# High-confidence manually curated instincts should be preserved alongside these.
+
+---
+id: developer-roadmap-commit-conventional
+trigger: "when writing a commit message"
+confidence: 0.85
+domain: git
+source: repo-analysis
+source_repo: https://github.com/WangNingkai/developer-roadmap
+---
+
+# Developer Roadmap Commit Conventional
+
+## Action
+
+Use conventional commit format with prefixes: chore, fix, docs
+
+## Evidence
+
+- 200 commits analyzed
+- Detected conventional commit pattern
+- Examples: chore: sync content to repo (#9810), fix: add reminder to change env before development (#9502)
+
+---
+id: developer-roadmap-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/WangNingkai/developer-roadmap
+---
+
+# Developer Roadmap Commit Length
+
+## Action
+
+Keep commit messages concise (~43 characters)
+
+## Evidence
+
+- Average commit message length: 43 chars
+- Based on 200 commits
+
+---
+id: developer-roadmap-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/WangNingkai/developer-roadmap
+---
+
+# Developer Roadmap Naming Files
+
+## Action
+
+Use kebab-case naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: kebab-case
+
+---
+id: developer-roadmap-import-relative
+trigger: "when importing modules"
+confidence: 0.75
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/WangNingkai/developer-roadmap
+---
+
+# Developer Roadmap Import Relative
+
+## Action
+
+Use relative imports for project files
+
+## Evidence
+
+- Import analysis shows relative import pattern
+- Example: import { x } from '../lib/x'
+
+---
+id: developer-roadmap-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/WangNingkai/developer-roadmap
+---
+
+# Developer Roadmap Export Style
+
+## Action
+
+Prefer mixed exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: mixed
+
+---
+id: developer-roadmap-arch-type-based
+trigger: "when adding new code"
+confidence: 0.8
+domain: architecture
+source: repo-analysis
+source_repo: https://github.com/WangNingkai/developer-roadmap
+---
+
+# Developer Roadmap Arch Type Based
+
+## Action
+
+Place code in the appropriate type folder (components/, services/, utils/, etc.)
+
+## Evidence
+
+- Type-based module organization detected
+- Folders: api, components, data, directives, helper
+
+---
+id: developer-roadmap-test-separate
+trigger: "when writing tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/WangNingkai/developer-roadmap
+---
+
+# Developer Roadmap Test Separate
+
+## Action
+
+Place tests in the tests/ or __tests__/ directory, mirroring src structure
+
+## Evidence
+
+- Separate test directory pattern detected
+- Tests live in dedicated test folders
+
+---
+id: developer-roadmap-test-framework
+trigger: "when writing tests"
+confidence: 0.9
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/WangNingkai/developer-roadmap
+---
+
+# Developer Roadmap Test Framework
+
+## Action
+
+Use playwright as the test framework
+
+## Evidence
+
+- Test framework detected: playwright
+- File pattern: *.spec.ts
+
+---
+id: developer-roadmap-test-naming
+trigger: "when creating a test file"
+confidence: 0.85
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/WangNingkai/developer-roadmap
+---
+
+# Developer Roadmap Test Naming
+
+## Action
+
+Name test files using the pattern: *.spec.ts
+
+## Evidence
+
+- File pattern: *.spec.ts
+- Consistent across test files
+
+---
+id: developer-roadmap-test-mocking
+trigger: "when mocking dependencies in tests"
+confidence: 0.75
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/WangNingkai/developer-roadmap
+---
+
+# Developer Roadmap Test Mocking
+
+## Action
+
+Use msw for mocking
+
+## Evidence
+
+- Mocking pattern detected: msw
+- Consistent across test files
+
+---
+id: developer-roadmap-workflow-feature-development
+trigger: "when implementing a new feature"
+confidence: 0.75
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/WangNingkai/developer-roadmap
+---
+
+# Developer Roadmap Workflow Feature Development
+
+## Action
+
+Follow the feature-development workflow:
+1. Add feature implementation
+2. Add tests for feature
+3. Update documentation
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~5x per month
+- Files: **/*.test.*, **/api/**
+
+---
+id: developer-roadmap-workflow-sync-content-to-repo
+trigger: "when doing sync content to repo"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/WangNingkai/developer-roadmap
+---
+
+# Developer Roadmap Workflow Sync Content To Repo
+
+## Action
+
+Follow the sync-content-to-repo workflow:
+1. Fetch new or updated content files from the external source.
+2. Copy or update multiple markdown files in the appropriate roadmap/content directories.
+3. Commit all changes with a standardized message (e.g., 'chore: sync content to repo').
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~10x per month
+- Files: src/data/roadmaps/*/content/*.md, src/data/question-groups/*/content/*.md
+
+---
+id: developer-roadmap-workflow-fix-or-update-single-content-file
+trigger: "when doing fix or update single content file"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/WangNingkai/developer-roadmap
+---
+
+# Developer Roadmap Workflow Fix Or Update Single Content File
+
+## Action
+
+Follow the fix-or-update-single-content-file workflow:
+1. Edit the relevant markdown file in src/data/roadmaps/*/content/.
+2. Commit the change with a descriptive message.
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~8x per month
+- Files: src/data/roadmaps/*/content/*.md
+
+---
+id: developer-roadmap-workflow-add-or-update-roadmap-json
+trigger: "when doing add or update roadmap json"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/WangNingkai/developer-roadmap
+---
+
+# Developer Roadmap Workflow Add Or Update Roadmap Json
+
+## Action
+
+Follow the add-or-update-roadmap-json workflow:
+1. Edit the roadmap JSON file (e.g., frontend.json, mlops.json, rust.json).
+2. Commit the change with a descriptive message.
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: src/data/roadmaps/*/*.json
+
+---
+id: developer-roadmap-instinct-file-naming
+trigger: "When creating a new file"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: WangNingkai/developer-roadmap
+---
+
+# Developer Roadmap Instinct File Naming
+
+## Action
+
+Name the file using kebab-case
+
+## Evidence
+
+- Pattern in namingConventions.files
+- All files in src/components, src/hooks, etc. use kebab-case
+
+---
+id: developer-roadmap-instinct-function-naming
+trigger: "When defining a new function"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: WangNingkai/developer-roadmap
+---
+
+# Developer Roadmap Instinct Function Naming
+
+## Action
+
+Name the function using camelCase
+
+## Evidence
+
+- Pattern in namingConventions.functions
+- Functions in src/hooks and src/helper follow camelCase
+
+---
+id: developer-roadmap-instinct-class-naming
+trigger: "When defining a new class"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: WangNingkai/developer-roadmap
+---
+
+# Developer Roadmap Instinct Class Naming
+
+## Action
+
+Name the class using PascalCase
+
+## Evidence
+
+- Pattern in namingConventions.classes
+- Classes in src/components use PascalCase
+
+---
+id: developer-roadmap-instinct-constant-naming
+trigger: "When declaring a constant"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: WangNingkai/developer-roadmap
+---
+
+# Developer Roadmap Instinct Constant Naming
+
+## Action
+
+Name the constant using SCREAMING_SNAKE_CASE
+
+## Evidence
+
+- Pattern in namingConventions.constants
+- Constants in src/lib and config files use SCREAMING_SNAKE_CASE
+
+---
+id: developer-roadmap-instinct-import-style
+trigger: "When importing modules"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: WangNingkai/developer-roadmap
+---
+
+# Developer Roadmap Instinct Import Style
+
+## Action
+
+Use relative import paths
+
+## Evidence
+
+- Pattern in importStyle
+- Imports in src/components and src/hooks use relative paths
+
+---
+id: developer-roadmap-instinct-export-style
+trigger: "When exporting modules or functions"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: WangNingkai/developer-roadmap
+---
+
+# Developer Roadmap Instinct Export Style
+
+## Action
+
+Use mixed export style (default and named exports as appropriate)
+
+## Evidence
+
+- Pattern in exportStyle
+- Both default and named exports found in src/components and src/lib
+
+---
+id: developer-roadmap-instinct-test-file-naming
+trigger: "When creating a test file"
+confidence: 0.9
+domain: testing
+source: repo-analysis
+source_repo: WangNingkai/developer-roadmap
+---
+
+# Developer Roadmap Instinct Test File Naming
+
+## Action
+
+Name the file with a .spec.ts suffix
+
+## Evidence
+
+- Pattern in testing.filePattern
+- Test files in src/**/ end with .spec.ts
+
+---
+id: developer-roadmap-instinct-test-framework
+trigger: "When writing tests"
+confidence: 0.9
+domain: testing
+source: repo-analysis
+source_repo: WangNingkai/developer-roadmap
+---
+
+# Developer Roadmap Instinct Test Framework
+
+## Action
+
+Use Playwright as the testing framework
+
+## Evidence
+
+- Pattern in testing.framework
+- playwright.config.ts present in repo
+
+---
+id: developer-roadmap-instinct-test-type
+trigger: "When writing tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: WangNingkai/developer-roadmap
+---
+
+# Developer Roadmap Instinct Test Type
+
+## Action
+
+Write unit tests
+
+## Evidence
+
+- Pattern in testing.testTypes
+- Majority of test files are unit tests
+
+---
+id: developer-roadmap-instinct-mocking
+trigger: "When mocking API or network calls in tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: WangNingkai/developer-roadmap
+---
+
+# Developer Roadmap Instinct Mocking
+
+## Action
+
+Use msw (Mock Service Worker) for mocking
+
+## Evidence
+
+- Pattern in testing.mockingStyle
+- msw used in test setup
+
+---
+id: developer-roadmap-instinct-commit-format
+trigger: "When writing a commit message"
+confidence: 0.9
+domain: git
+source: repo-analysis
+source_repo: WangNingkai/developer-roadmap
+---
+
+# Developer Roadmap Instinct Commit Format
+
+## Action
+
+Use conventional commit format with a prefix (e.g., chore, fix, docs, feat)
+
+## Evidence
+
+- Seen in commit 'chore: sync content to repo (#9810)'
+- Seen in commit 'fix: add reminder to change env before development (#9502)'
+- Pattern in commits.prefixes
+
+---
+id: developer-roadmap-instinct-commit-length
+trigger: "When writing a commit message"
+confidence: 0.7
+domain: git
+source: repo-analysis
+source_repo: WangNingkai/developer-roadmap
+---
+
+# Developer Roadmap Instinct Commit Length
+
+## Action
+
+Keep commit messages concise (around 43 characters on average)
+
+## Evidence
+
+- Pattern in commits.averageLength
+- Most commit messages are short and descriptive
+
+---
+id: developer-roadmap-instinct-sync-content-workflow
+trigger: "When someone wants to update the repository with the latest content from an external source or CMS"
+confidence: 0.99
+domain: workflow
+source: repo-analysis
+source_repo: WangNingkai/developer-roadmap
+---
+
+# Developer Roadmap Instinct Sync Content Workflow
+
+## Action
+
+Fetch new or updated content files, update markdown files in roadmap/content directories, and commit with 'chore: sync content to repo'
+
+## Evidence
+
+- Workflow: sync-content-to-repo
+- Seen in commit 'chore: sync content to repo (#9807)'
+- Pattern in files src/data/roadmaps/*/content/*.md
+
+---
+id: developer-roadmap-instinct-edit-single-content-file
+trigger: "When someone wants to fix a typo, update a resource link, or improve formatting in a single roadmap topic"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: WangNingkai/developer-roadmap
+---
+
+# Developer Roadmap Instinct Edit Single Content File
+
+## Action
+
+Edit the relevant markdown file in src/data/roadmaps/*/content/ and commit with a descriptive message
+
+## Evidence
+
+- Workflow: fix-or-update-single-content-file
+- Seen in commit 'docs: add MDN HTML basics resource to frontend roadmap (#9541)'
+- Pattern in files src/data/roadmaps/*/content/*.md
+
+---
+id: developer-roadmap-instinct-edit-roadmap-json
+trigger: "When someone wants to update the roadmap structure or fix/add resource links"
+confidence: 0.8
+domain: workflow
+source: repo-analysis
+source_repo: WangNingkai/developer-roadmap
+---
+
+# Developer Roadmap Instinct Edit Roadmap Json
+
+## Action
+
+Edit the roadmap JSON file (e.g., frontend.json, mlops.json, rust.json) and commit with a descriptive message
+
+## Evidence
+
+- Workflow: add-or-update-roadmap-json
+- Pattern in files src/data/roadmaps/*/*.json
+
